@@ -5,13 +5,14 @@ on:
       - main
   
 jobs:
-  crush:
+  build:
+    name: calibreapp/webp-optimizer
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Crush images
-        uses: crush-pics/crush-pics-github-action@master
+      - name: Checkout Repo
+        uses: actions/checkout@master
+
+      - name: Compress Images
+        uses: calibreapp/webp-optimizer@master
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          api-key: ${{ secrets.CRUSH_API_KEY }}
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
