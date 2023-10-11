@@ -6,13 +6,13 @@ on:
   
 jobs:
   build:
-    name: calibreapp/webp-optimizer
+    name: nemeaXYZ/webp-optimizer
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
 
       - name: Compress Images
-        uses: calibreapp/webp-optimizer@master
+        uses: nemeaXYZ/webp-optimizer@master
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
