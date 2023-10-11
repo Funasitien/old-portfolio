@@ -94,6 +94,30 @@
 }
 
 </style>
+<script>
+  // function to set a given theme/color-schemefunction setTheme(themeName) {
+  localStorage.setItem('theme', themeName);
+  document.documentElement.className = themeName;
+}
+
+// function to toggle between light and dark theme
+function toggleTheme() {
+  if (localStorage.getItem('theme') === 'theme-dark') {
+    setTheme('theme-light');
+  } else {
+    setTheme('theme-dark');
+  }
+}
+
+        // Immediately invoked function to set the theme on initial load
+        (function () {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-dark');
+            } else {
+                setTheme('theme-light');
+            }
+        })();
+  </script>
 <body class="cdnn">
       <header style="background: var(--color-secondary);">
       <div class="txt mx-auto flex justify-between items-center py-4 px-4">
@@ -140,31 +164,6 @@
 </footer>
 
   </div>
-
-  <script>
-  // function to set a given theme/color-schemefunction setTheme(themeName) {
-  localStorage.setItem('theme', themeName);
-  document.documentElement.className = themeName;
-}
-
-// function to toggle between light and dark theme
-function toggleTheme() {
-  if (localStorage.getItem('theme') === 'theme-dark') {
-    setTheme('theme-light');
-  } else {
-    setTheme('theme-dark');
-  }
-}
-
-        // Immediately invoked function to set the theme on initial load
-        (function () {
-            if (localStorage.getItem('theme') === 'theme-dark') {
-                setTheme('theme-dark');
-            } else {
-                setTheme('theme-light');
-            }
-        })();
-  </script>
 </body>
 
 </html>
