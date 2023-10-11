@@ -1,0 +1,254 @@
+@import "pixel-perfect.ttf";
+
+@font-face {
+    font-family: Pixel Perfect;
+    src:local("pixel-perfect.ttf");
+}
+
+.theme-light {
+ --color-primary: #f0f0f0;
+ --color-secondary: #dedede;
+ --color-accent: #a1d8fb;
+ --font-color: #000000;
+ }
+.theme-dark {
+ --color-primary: #1a202c;
+ --color-secondary: #34425d;
+ --color-accent: #a1d8fb;
+ --font-color: #ffffff;
+ }
+
+bold {
+  font-weight: bold;
+}
+
+hr {
+  babackground-color: var(--font-color);
+}
+
+.footer {
+  background: var(--color-secondary);
+}
+
+.header {
+  background: var(--color-secondary);
+}
+
+.card {
+  box-shadow:  24px 24px 48px #a6a6a6,
+             -24px -24px 48px #ffffff;
+}
+
+.accent {
+  background-color: var(--color-accent)
+}
+
+/* Tooltip */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: opacity 0.5s;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 4px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.flag-current {
+  width: auto;
+  height: 43px;
+  border:3px solid #a1d8fb;
+  border-radius: 6px;
+}
+
+.flag{
+  width: auto;
+  height: 40px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 15px 0;
+  white-space: nowrap;
+  position: relative;
+  font: Inter
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  /*background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+*/}
+
+.logos:after {
+  right: 0;
+  /*background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+*/}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 8s slide infinite linear;
+}
+
+.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+
+}
+
+.cdnn {
+  background-color: var(--color-primary);
+  color: var(--font-color);
+}
+
+.txt {
+  color: var(--font-color);
+}
+
+
+.dark-mode-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.theme-light .icon {
+  background-image: url('img/sun.png');
+}
+
+.theme-dark .icon {
+  background-image: url('img/moon.png');
+}
+
+.project-card {
+  background-color: var(--color-secondary);
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.project-plus {
+  background-color: var(--color-primary);
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.project-icon {
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  color: #777777;
+}
+
+.project-content {
+  font-size: 14px;
+  color: var(--font-color);
+}
+
+
+
+.banner {
+  background-image: url('img/banner.png'), ;
+  object-fit: fit;
+}
+
+.profile-picture {
+  background-image: url('img/profile.png');
+  background-size: cover;
+  background-position: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+
+.banner {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), var(--color-primary)),
+                          url('img/banner.png');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+  color: var(--color-primary);
+    }
+.bannerr img {
+        width: 100px; /* Adjust the image size as needed */
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+    }
+
+.bann {        
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.bann img {
+  width: 100px; /* Adjust the image size as needed */
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}

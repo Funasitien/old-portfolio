@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr" class="theme-light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEMOCRAFT V1</title>
+  <script src="https://kit.fontawesome.com/9f1f06bf01.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com" rel="stylesheet"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="../../../styles.css?v=1.1" rel="stylesheet">
+      <!-- Open Graph Meta Tags -->
+  <meta name="theme-color" content="#a1d8fb">
+  <meta property="og:title" content="KernaCraft - Archive">
+  <meta property="og:description" content="Découvrez ou redécouvrez KernaCraft avec cette archive -- By DreamCloud">
+  <meta property="og:image" content="https://f.dreamclouds.fr/img/logo/kerna.png">
+  <meta property="og:url" content="https://f.dreamclouds.fr/fr/archive/kerna">
+  <meta property="og:type" content="website">
+  <style>
+    /* Tooltip */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .tooltip .tooltip-text {
+      visibility: hidden;
+      width: 160px;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 4px 8px;
+      position: absolute;
+      z-index: 1;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+  </style>
+</head>
+
+<body class="cdnn">
+
+  <header style="background: var(--color-secondary);">
+    <div class="txt mx-auto flex justify-between items-center py-4 px-4">
+      <h1 class="text-2xl font-bold">☁️ Funasitien</h1>
+      <button class="dark-mode-toggle" onclick="toggleTheme()">
+        <span class="icon"></span>
+      </button>
+    </div>
+  </header>
+  <p class="py-2"></p>
+  <a href="../" class="text-l font-bold px-4 py-4"><i class="fa-solid fa-arrow-left"></i> Retour au menu</a>
+  <div class="container mx-auto px-4 mt-8">
+    <div class="grid flex col-span-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <!-- Card -->
+      <div class="card flex relative col-span-2 group rounded-lg shadow-lg overflow-hidden">
+        <!-- Custom Image Background -->
+        <img src="../../../img/archive/demo-bann-1.png" alt="Card Image" class="object-cover">
+        <!-- Text Info on Hover -->
+        <div class="absolute bottom-0 left-0 w-full px-4 py-2 text-white opacity-0 group-hover:opacity-100 transition-opacity bg-black bg-opacity-50">
+          <h2 class="text-lg font-semibold">Bannière pour le lancement de DEMOCRAFT</h2>
+          <p class="text-sm">Avec notre lobby en arrière plan, qui est toujours présent aujourd'hui :)</p>
+        </div>
+      </div>
+      
+      <div class="card flex col-span-2 row-span-2 relative group rounded-lg shadow-lg overflow-hidden">
+        <img src="../../../img/archive/demo-beta.png" alt="Card Image" class="object-cover">
+        <div class="absolute bottom-0 left-0 w-full px-4 py-2 text-white opacity-0 group-hover:opacity-100 transition-opacity bg-black bg-opacity-50">
+          <h2 class="text-lg font-semibold">Affiche pour le lancement de la BETA de DEMOCRAFT</h2>
+          <p class="text-sm">Le lobby en arrière plan, un de mes premier rendu 3D pour le titre et des infos simples et efficaces dans le post. Le serveur ouvrira oficiellement quelques semaines plus tard.</p>
+        </div>
+      </div>
+
+      <div class="card flex col-span-2 relative group rounded-lg shadow-lg overflow-hidden">
+        <img src="../../../img/archive/demo-bann-2.png" alt="Card Image" class="object-cover">
+        <div class="absolute bottom-0 left-0 w-full px-4 py-2 text-white opacity-0 group-hover:opacity-100 transition-opacity bg-black bg-opacity-50">
+          <h2 class="text-lg font-semibold">2em bannière pour le lancement de DEMOCRAFT</h2>
+          <p class="text-sm">Ici, c'est l'arrière plan du lobby du bedwars. Il a été suprimmer, puis remplacer pour un lobby plus grand lors de l'ajout du serveur bedwars.</p>
+        </div>
+      </div>
+
+      <div class="card flex col-span-2 row-span-2 relative group rounded-lg shadow-lg overflow-hidden">
+        <img src="../../../img/archive/demo-web.jpg" alt="Card Image" class="object-cover">
+        <div class="absolute bottom-0 left-0 w-full px-4 py-2 text-white opacity-0 group-hover:opacity-100 transition-opacity bg-black bg-opacity-50">
+          <h2 class="text-lg font-semibold">Apercu de notre site web</h2>
+          <p class="text-sm">Ce port peux parraitre anodin, mais il contient beaucoup dinformations hyper interessantes pour l'archive : Tout d'abord, une date officiel de la beta de DEMOCRAFT, et ensuite, , des anciens membres de notre staff !
+          Sinon, c'est un site basic azuriom avec le thème Volcano.</p>
+        </div>
+      </div>
+      
+      <div class="card flex col-span-2 relative group rounded-lg shadow-lg overflow-hidden">
+        <img src="../../../img/archive/demo-bann-3.png" alt="Card Image" class="object-cover">
+        <div class="absolute bottom-0 left-0 w-full px-4 py-2 text-white opacity-0 group-hover:opacity-100 transition-opacity bg-black bg-opacity-50">
+          <h2 class="text-lg font-semibold">2em Affiche pour le lancement de la BETA de DEMOCRA</h2>
+          <p class="text-sm">A l'époque, on avait des booster discord. Pour de vrai. 2 même.</p>
+        </div>
+      </div>
+      
+      <div class="card flex col-span-2 relative group rounded-lg shadow-lg overflow-hidden">
+        <img src="../../../img/archive/demo-tab.jpg" alt="Card Image" class="object-cover">
+        <div class="absolute bottom-0 left-0 w-full px-4 py-2 text-white opacity-0 group-hover:opacity-100 transition-opacity bg-black bg-opacity-50">
+          <h2 class="text-lg font-semibold">Le plus gros pic de joueur de DEMOCRAFT</h2>
+          <p class="text-sm">Bon là je triche un peu c'est la beta de la V2. Mais maintenant le pack v2 est sortit, donc bon.......</p>
+        </div>
+      </div>
+      
+
+    </div>
+  
+  <h1 class="px-4 py-4 mt-8 text-3xl font-bold">Informations</h1>
+  <p class="px-4 leading-loose">DEMOCRAFT est un serveur Minecraft évelopper par Funasitien et Lucifiss, et fondé avec TaeSynn (aussi TrigerTae).
+    Son but était de réunir toute les plateformes, pour permettre à tout le monde de jouer ensemble.</p>
+  <p class="py-2"></p>
+  <p class="px-4 leading-loose"><bold>Fondé par</bold> Funasitien & TaeSynn (maintenant TrigerTae)</p>
+  <p class="px-4 leading-loose"><bold>Statut:</bold> <i class="fa-solid fa-circle" style="color: #949494;"></i> Fermé (mais replacer par une V2)</p>
+  <p class="px-4 leading-loose">
+    <bold>Sauvegarde:</bold> Totale <span class="tooltip"><i class="fa-solid fa-circle-info"></i><span class="tooltip-text">Le code et la map sont sauvegardés. Avec la V2 c'est inutile mais une sauvegarde existe peux être encore.</span></span></p>
+
+  <h1 class="px-4 py-4 text-3xl font-bold">Vous voulez revoir ce projet ?</h1>
+  <p class="px-4 leading-loose mb-8">N'hésitez pas à nous faire savoir si vous aviez aimé et que vous voudriez revoir ce projet !
+    Vous pouvez nous contacter sur
+    <a href="https://dsc.gg/drmcld" class="bg-indigo-600 hover:bg-indigo-800 text-white font-bold py-2 px-4 rounded"><i class="fa-brands fa-discord"></i> Discord</a>
+    ou par
+    <a href="mailto:funasitien@dreamclouds.fr" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"><i class="fa-solid fa-envelope"></i> Mail</a> !
+ 
+</div>
+ 
+  <footer class="txt footer rounded-lg shadow m-4 py-4">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <a class="flex items-center mb-4 sm:mb-0">
+                <img src="https://f.dreamclouds.fr/img/logo.png" class="h-8 mr-3 txt" alt="DreamCloud logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap">By DreamCloud</span>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                <li>
+                    <a href="mailto:funasitien@dreamclouds.fr" class="mr-4 hover:underline md:mr-6 "><i class="fa-solid fa-envelope"></i> Contact</a>
+                </li>
+                <li>
+                    <a href="https://dsc.gg/drmcld" class="mr-4 hover:underline md:mr-6"><i class="fa-brands fa-discord"></i> Discord</a>
+                </li>
+                <li>
+                    <a href="../../../privacy" class="mr-4 hover:underline md:mr-6"><i class="fa-solid fa-key"></i> Privacy Policy</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 sm:mx-auto lg:my-8" style="background-color: var(--font-color)"/>
+          <div class="mx-auto flex justify-center items-center">
+            <a href="../"><img class="px-1 flag-current" src="/img/fr.png"/></a>
+            <a href="../en"><img class="px-1 flag" src="/img/en.png"/></a>
+          </div>
+        <span class="py-2 block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://f.dreamclouds.fr/" class="hover:underline">DreamCloud™</a>. Tout droit réservé.</span>
+    </div>
+</footer>
+
+
+  <script src="../../../script.js"></script>
+</body>
+
+</html>

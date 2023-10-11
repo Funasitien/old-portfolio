@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr" class="theme-light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <script src="https://kit.fontawesome.com/9f1f06bf01.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com" rel="stylesheet"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="../styles.css?v=1.1" rel="stylesheet">
+  <link rel="icon" href="../img/profile.png">
+  
+    <!-- Open Graph Meta Tags -->
+  <meta name="theme-color" content="#a1d8fb">
+  <meta property="og:title" content="Funasitien DreamCloud">
+  <meta property="og:description" content="This is my portfolio website.">
+  <meta property="og:image" content="https://f.dreamclouds.fr/img/profile.png">
+  <meta property="og:url" content="https://f.dreamclouds.fr">
+  <meta property="og:type" content="website">
+</head>
+<body class="cdnn">
+  <header style="background: var(--color-secondary);">
+    <div class="txt mx-auto flex justify-between items-center py-4 px-4">
+      <h1 class="text-2xl font-bold">☁️ Funasitien</h1>
+      <button class="dark-mode-toggle" onclick="toggleTheme()">
+        <span class="icon"></span>
+      </button>
+    </div>
+  </header>
+      <!-- Banner section -->
+  <section height="120" class="banner py-8 ">
+        <div class="bg-transparent container mx-auto flex items-center justify-center">
+            <img class="w-20 h-20 rounded-full mr-4" src="../img/profile.png" alt="Profile Picture">
+            <h1 class="text-3xl font-bold txt">Funasitien</h1>
+        </div>
+    </section>
+  <div class="container mx-auto cdnn">
+    <div class="md:flex md:justify-between md:items-center py-8 px-8">
+        <div class="about">
+          <h2 class="text-3xl font-bold mb-4">Hey 👋</h2>
+          <p class="leading-loose">
+            Hello, my name is Funasitien. I am a passionate programmer from France. I love using technology to create fun projects and services for others to enjoy.
+            <div class="my-2"></div>
+            I joined my first hosting company, Diamond Heberg, at age 14 to provide gaming and web servers. I now run several popular Minecraft mini-games servers under my brand DEMOCRAFT. Managing these large technical projects has given me valuable experience in areas like server administration, plugin development, and customer support.
+            <div class="my-2"></div>
+            When I'm not coding, you can find me playing Minecraft or hanging out in Discord voice channels. I enjoy bringing people together through online communities. My skills in Python, HTML, CSS, and SkriptMC allow me to build Discord bots and automated systems to enhance the experience for users.
+            <div class="my-2"></div>
+            My goal is to one day run a successful tech business providing innovative services. I am constantly learning new skills and taking on challenges to reach this dream. Through platforms like my website and social media, I showcase my work to other programmers and potential clients.
+            <div class="my-2"></div>
+            Please feel free to check out my portfolio to learn more about my background and recent projects. I would love to discuss any custom software or hosting solutions I could provide. You can contact me on Discord for any questions!
+          </p>
+        </div>
+    </div>
+    
+    <div class="projects mt-8 py-8 px-8">
+      <h2 class="text-3xl font-bold mb-4">Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="project-card">
+    <div class="project-header">
+      <img src="https://democraft.fr/storage/img/title.png"/>
+    </div>
+    <div class="project-content">
+      <p class="project-description">
+        <strong>DEMOCRAFT</strong>, a Minecraft Java and Bedrock minigame server.
+      </p>
+    </div>
+    <div class="bottom-6 flex justify-between items-center">
+      <a href="https://democraft.fr" class="text-white bg-red-400 mt-2 py-2 px-4 rounded">
+        <i class="fa-solid fa-globe"></i> Website
+      </a>    
+      <a href="https://dsc.gg/democraft" class="text-white bg-indigo-500 py-2 px-4 rounded">
+        <i class="fa-brands fa-discord"></i> Discord
+      </a>        
+    </div>
+  </div>
+  
+     <div class="project-card">
+    <div class="project-header">
+      <img src="https://diamond-heberg.fr/images/20221026_173942.png"/>
+    </div>
+    <div class="project-content">
+      <p class="project-description">
+        <strong>Diamond Heberg</strong>, a game, web and VPS hosting company.
+      </p>
+    </div>
+    <div class="flex justify-between items-center">
+      <a href="https://democraft.fr" class="text-white bg-blue-300 mt-2 py-2 px-4 rounded">
+        <i class="fa-solid fa-globe"></i> Website
+      </a>    
+      <a href="https://dsc.gg/democraft" class="text-white bg-indigo-500 py-2 px-4 rounded">
+        <i class="fa-brands fa-discord"></i> Discord
+      </a>        
+    </div>
+  </div>
+        
+        
+     <div class="project-card">
+    <div class="project-header">
+      <img src="../img/archcloud.png"/>
+    </div>
+    <div class="project-content">
+      <p class="project-description">
+        <strong>ArchCloud</strong>, an archive of all of my creations.
+      </p>
+    </div>
+    <div class="bottom-6 flex justify-between items-center">
+      <a href="../fr/archive" class="text-white bg-gray-400 mt-2 py-2 px-4 rounded">
+        More (Not Translated Yet) <i class="fa-solid fa-circle-arrow-right"></i>
+      </a>           
+    </div>
+  </div>
+        
+      </div>
+    </div>
+    
+    <div class="projects mt-8 py-8 px-8">
+      <h2 class="text-3xl font-bold mb-4">Socials</h2>
+        <div class="logos">
+          <div class="logos-slide font-bold text-white">
+            <a href="https://discord.com/users/574169911782277135" class="bg-indigo-500 py-2 px-4 rounded"><i class="fa-brands fa-discord"></i> @funasitien</a>    
+            <a href="https://youtube.com/@fdreamcloud" class="bg-red-500 py-2 px-4 rounded"><i class="fa-brands fa-youtube"></i> @fdreamcloud</a>    
+            <a href="https://github.com/funasitien" class="bg-gray-500 py-2 px-4 rounded"><i class="fa-brands fa-github"></i> @funasitien</a>    
+            <a href="https://instagram.com/fdreamcloud" class="instagram py-2 px-4 rounded"><i class="fa-brands fa-instagram"></i> @funasitien</a>    
+            <a href="https://soundcloud.com/bydreamcloud" class="bg-orange-500 py-2 px-4 rounded"><i class="fa-brands fa-soundcloud"></i> /bydreamcloud</a>    
+            <a href="https://twitter.com/funasitien" class="bg-sky-400 py-2 px-4 rounded"><i class="fa-brands fa-twitter"></i> @funasitien</a>    
+            
+          </div>
+
+
+        </div>
+
+    </div>
+    <div class="skills mt-8 py-5 px-8">
+      <h2 class="text-3xl font-bold mb-4">Skills</h2>
+      <ul class="list-disc pl-6">
+        <li class="mb-2"><span class="font-bold">Python</span> - Discord Bots, API and Websites</li>
+        <li class="mb-2"><span class="font-bold">HTML</span> - Basicly HTML</li>
+        <li class="mb-2"><span class="font-bold">CSS</span> - Bootstrap & Tailwindcss</li>
+        <li class="mb-2"><span class="font-bold">Minecraft</span> - Server Creation</li>
+        <li class="mb-2"><span class="font-bold">SkriptMC</span> - Everithing with skript.</li>
+      </ul>
+    </div>
+  </div>
+<div class="cdnn">
+<footer class="txt footer rounded-lg shadow m-4 py-4">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <a class="flex items-center mb-4 sm:mb-0">
+                <img src="https://f.dreamclouds.fr/img/logo.png" class="h-8 mr-3 txt" alt="DreamCloud logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap">By DreamCloud</span>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                <li>
+                    <a href="mailto:funasitien@dreamclouds.fr" class="mr-4 hover:underline md:mr-6 "><i class="fa-solid fa-envelope"></i> Contact</a>
+                </li>
+                <li>
+                    <a href="https://dsc.gg/drmcld" class="mr-4 hover:underline md:mr-6"><i class="fa-brands fa-discord"></i> Discord</a>
+                </li>
+                <li>
+                    <a href="../../../privacy" class="mr-4 hover:underline md:mr-6"><i class="fa-solid fa-key"></i> Privacy Policy</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 sm:mx-auto lg:my-8" style="background-color: var(--font-color)"/>
+          <div class="mx-auto flex justify-center items-center">
+            <a href="../"><img class="px-1 flag" src="../img/fr.png"/></a>
+            <a href="../en"><img class="px-1 flag-current" src="../img/en.png"/></a>
+          </div>
+        <span class="py-2 block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://f.dreamclouds.fr/" class="hover:underline">DreamCloud™</a>. All Rights Reserved.</span>
+    </div>
+</footer>
+</div>
+  <script src="../script.js"></script>
+  <script>
+    var copy = document.querySelector(".logos-slide").cloneNode(true);
+    document.querySelector(".logos").appendChild(copy);
+  </script>
+</body>
+
+</html>
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Footer with Rounded Top Corners</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="https://cdn.tailwindcss.com" rel="stylesheet"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+    footer {
+      background-color: #1a202c;
+      color: white;
+      padding: 1rem;
+      position: sticky;
+      bottom: 0;
+      left:0 ;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer-icon {
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Content container -->
+  <div class="flex-grow">
+    <!-- Your content goes here -->
+    <div class="projects mt-8 py-8 px-4">      <h2 class="text-3xl font-bold mb-4">Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="project-card">
+    <div class="project-header">
+      <h3 class="project-title">Project 1</h3>
+      <span class="project-icon"><img src="https://democraft.fr/storage/img/logo-pixel.png"/></span>
+    </div>
+    <div class="project-content">
+      <p class="project-description">This is the description of Project 1.</p>
+    </div>
+  </div>
+  
+  <div class="project-card">
+    <div class="project-header">
+      <h3 class="project-title">Project 2</h3>
+      <span class="project-icon">Icon</span>
+    </div>
+    <div class="project-content">
+      <p class="project-description">This is the description of Project 2.</p>
+    </div>
+  </div>
+  <div class="project-card">
+    <div class="project-header">
+      <h3 class="project-title">More</h3>
+      <span class="project-icon">Icc</span>
+    </div>
+    <div class="project-content">
+      <p class="project-description">This is the description of Project 2.</p>
+    </div>
+  </div>
+      </div>
+    </div>
+    
+    <div class="projects mt-8 py-8 px-4">
+      <h2 class="text-3xl font-bold mb-4">Socials</h2>
+        <div class="logos">
+          <div class="logos-slide font-bold text-white">
+            <button href="https://discord.com/users/574169911782277135" class="bg-indigo-500 py-2 px-4 rounded"><i class="fa-brands fa-discord"></i> @funasitien</button>    
+            <button href="https://youtube.com/@fdreamcloud" class="bg-red-500 py-2 px-4 rounded"><i class="fa-brands fa-youtube"></i> @fdreamcloud</button>    
+            <button href="https://github.com/funasitien" class="bg-gray-500 py-2 px-4 rounded"><i class="fa-brands fa-github"></i> @funasitien</button>    
+            <button href="https://instagram.com/fdreamcloud" class="instagram py-2 px-4 rounded"><i class="fa-brands fa-instagram"></i> @funasitien</button>    
+            <button href="https://soundcloud.com/bydreamcloud" class="bg-orange-500 py-2 px-4 rounded"><i class="fa-brands fa-soundcloud"></i> /bydreamcloud</button>    
+            <button href="https://twitter.com/funasitien" class="bg-sky-400 py-2 px-4 rounded"><i class="fa-brands fa-twitter"></i> @funasitien</button>    
+            
+          </div>
+
+
+        </div>
+
+    </div>
+    <div class="skills mt-8 py-5 px-4">
+      <h2 class="text-3xl font-bold mb-4">Skills</h2>
+      <ul class="list-disc pl-6">
+        <li class="mb-2"><span class="font-bold">Python</span> - Web development, automation</li>
+        <li class="mb-2"><span class="font-bold">JavaScript</span> - Front-end development, interactivity</li>
+        <li class="mb-2"><span class="font-bold">HTML</span> - Structure and layout of web pages</li>
+        <li class="mb-2"><span class="font-bold">CSS</span> - Styling and design of web pages</li>
+        <li class="mb-2"><span class="font-bold">Minecraft</span> - Customizations, plugins</li>
+        <li class="mb-2"><span class="font-bold">Scripting Languages</span> - Automating tasks</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Sticky footer -->
+  <footer>
+    <div class="footer-icons">
+      <span class="footer-icon"><i class="fab fa-facebook"></i></span>
+      <span class="footer-icon"><i class="fab fa-twitter"></i></span>
+      <span class="footer-icon"><i class="fab fa-instagram"></i></span>
+      <span class="footer-icon"><i class="fab fa-linkedin"></i></span>
+    </div>
+  </footer>
+
+<script src="../script.js"></script>
+  <script>
+    var copy = document.querySelector(".logos-slide").cloneNode(true);
+    document.querySelector(".logos").appendChild(copy);
+  </script>
+</body>
+
+</html>
+
+
+
+

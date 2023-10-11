@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr" class="theme-light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Morph SMP</title>
+  <script src="https://kit.fontawesome.com/9f1f06bf01.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com" rel="stylesheet"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="../../../styles.css?v=1.1" rel="stylesheet">
+  <style>
+    /* Tooltip */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .tooltip .tooltip-text {
+      visibility: hidden;
+      width: 160px;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 4px 8px;
+      position: absolute;
+      z-index: 1;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+  </style>
+</head>
+
+<body class="cdnn">
+
+  <header style="background: var(--color-secondary);">
+    <div class="txt mx-auto flex justify-between items-center py-4 px-4">
+      <a href="https://f.dreamclouds.fr"><h1 class="text-2xl font-bold">☁️ Funasitien</h1></a>
+      <button class="dark-mode-toggle" onclick="toggleTheme()">
+        <span class="icon"></span>
+      </button>
+    </div>
+  </header>
+  <p class="py-2"></p>
+  <a href="../" class="text-l font-bold px-4 py-4"><i class="fa-solid fa-arrow-left"></i> Retour au menu</a>
+  <div class="container mx-auto px-4 mt-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <!-- Card -->
+      <div class="card relative group rounded-lg shadow-lg overflow-hidden">
+        <!-- Custom Image Background -->
+        <img src="../../../img/archive/diamond-bann.png" alt="Card Image" class="object-cover">
+        <!-- Text Info on Hover -->
+        <div class="absolute bottom-0 left-0 w-full px-4 py-2 text-white opacity-0 group-hover:opacity-100 transition-opacity bg-black bg-opacity-50">
+          <h2 class="text-lg font-semibold">Dimaond wars</h2>
+          <p class="text-sm">Premier rendu 3D avec le spawn en arrière plan.</p>
+        </div>
+      </div>
+
+      <div class="card relative group rounded-lg shadow-lg overflow-hidden">
+        <img src="../../../img/archive/diamond-bann.png" alt="Card Image" class="object-cover">
+        <div class="absolute bottom-0 left-0 w-full px-4 py-2 text-white opacity-0 group-hover:opacity-100 transition-opacity bg-black bg-opacity-50">
+          <h2 class="text-lg font-semibold">1er BETA DISCORD</h2>
+          <p class="text-sm">Début septembre. Le serveur ouvre (il fermera 2 semaines plus tard)</p>
+        </div>
+      </div>
+
+      <!--<div class="card relative group rounded-lg shadow-lg overflow-hidden">
+        <img src="../../../img/archive/morph-web.jpg" alt="Card Image" class="object-cover">
+        <div class="absolute bottom-0 left-0 w-full px-4 py-2 text-white opacity-0 group-hover:opacity-100 transition-opacity bg-black bg-opacity-50">
+          <h2 class="text-lg font-semibold">Card Title</h2>
+          <p class="text-sm">Some additional information</p>
+        </div>
+      </div>-->
+      
+      <div class="card relative group rounded-lg shadow-lg overflow-hidden">
+        <img src="../../../img/archive/diamond-bann.png" alt="Card Image" class="object-cover">
+        <div class="absolute bottom-0 left-0 w-full px-4 py-2 text-white opacity-0 group-hover:opacity-100 transition-opacity bg-black bg-opacity-50">
+          <h2 class="text-lg font-semibold">L'interface du Morph Token</h2>
+          <p class="text-sm">Vous pouviez changer de morph avec un jeton qui ouvrais ce menu</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <h1 class="px-4 py-4 text-3xl font-bold">Informations</h1>
+  <p class="px-4 leading-loose">Le Morph SMP était une survie multi-joueur (Survival Multi-Player) oú l'on pouvais uniquement jouer en incarnat un animal.</p>
+  <p class="py-2"></p>
+  <p class="px-4 leading-loose"><bold>Fondé par</bold> Funasitien</p>
+  <p class="px-4 leading-loose"><bold>Statut:</bold> <i class="fa-solid fa-circle" style="color: #949494;"></i> Abandonné (Remplacé par DEMOCRAFT V2)</p>
+  <p class="px-4 leading-loose">
+    <bold>Sauvegarde:</bold> Entière <span class="tooltip"><i class="fa-solid fa-circle-info"></i><span class="tooltip-text">Ce projet peut être recréé.</span></span></p>
+
+  <h1 class="px-4 py-4 text-3xl font-bold">Vous voulez revoir ce projet ? Vous avez du contenu à rajouter ?</h1>
+  <p class="px-4 leading-loose">N'hésitez pas à nous faire savoir si vous aviez aimé et que vous voudriez revoir ce projet ou si vous avez des captures d'écrans à rajouter à l'archive !
+    Vous pouvez nous contacter via notre 
+    <a href="https://dsc.gg/drmcld" class="bg-indigo-600 hover:bg-indigo-800 text-white font-bold py-2 px-4 rounded"><i class="fa-brands fa-discord"></i> Discord</a>
+    ou par 
+    <a href="mailto:funasitien@dreamclouds.fr" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"><i class="fa-solid fa-envelope"></i> Mail</a> !
+  
+  <footer class="txt footer rounded-lg shadow m-4 py-4">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <a class="flex items-center mb-4 sm:mb-0">
+                <img src="https://f.dreamclouds.fr/img/logo.png" class="h-8 mr-3 txt" alt="DreamCloud logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap">By DreamCloud</span>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                <li>
+                    <a href="mailto:funasitien@dreamclouds.fr" class="mr-4 hover:underline md:mr-6 "><i class="fa-solid fa-envelope"></i> Contact</a>
+                </li>
+                <li>
+                    <a href="https://dsc.gg/drmcld" class="mr-4 hover:underline md:mr-6"><i class="fa-brands fa-discord"></i> Discord</a>
+                </li>
+                <li>
+                    <a href="../../../privacy" class="mr-4 hover:underline md:mr-6"><i class="fa-solid fa-key"></i> Privacy Policy</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 sm:mx-auto lg:my-8" style="background-color: var(--font-color)"/>
+          <div class="mx-auto flex justify-center items-center">
+            <a href="../"><img class="px-1 flag-current" src="/img/fr.png"/></a>
+            <a href="../en"><img class="px-1 flag" src="/img/en.png"/></a>
+          </div>
+        <span class="py-2 block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://f.dreamclouds.fr/" class="hover:underline">DreamCloud™</a>. Tout droit réservé.</span>
+    </div>
+</footer>
+
+
+  <script src="../../../script.js"></script>
+</body>
+
+</html>

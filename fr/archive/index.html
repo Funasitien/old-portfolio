@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr" class="theme-light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArchCloud 📦</title>
+  <script src="https://kit.fontawesome.com/9f1f06bf01.js" crossorigin="anonymous"></script>  <script src="https://cdn.tailwindcss.com" rel="stylesheet"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="../../styles.css" rel="stylesheet">
+  <style>
+    .random-image-container {
+      <!-- width: 400px;-->
+      height: 600px;
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+  <script>
+    function getRandomImage() {
+      var folderPath = "../../img/archive/"; // Path to the image folder
+      var imageElements = document.getElementsByClassName("random-image");
+
+      // Fetch the list of images in the folder
+      return fetch(folderPath)
+        .then(response => response.text())
+        .then(data => {
+          var parser = new DOMParser();
+          var htmlDoc = parser.parseFromString(data, "text/html");
+          var images = Array.from(htmlDoc.getElementsByTagName("a"))
+            .filter(link => link.href.match(/\.(jpe?g|png|gif)$/i))
+            .map(link => folderPath + link.href.substring(link.href.lastIndexOf('/') + 1));
+
+          // Select a random image from the array
+          var randomIndex = Math.floor(Math.random() * images.length);
+          var randomImage = images[randomIndex];
+
+          return randomImage;
+        });
+    }
+
+    function displayRandomImage() {
+      getRandomImage().then(function(imageUrl) {
+        var imageElements = document.getElementsByClassName("random-image");
+        for (var i = 0; i < imageElements.length; i++) {
+          imageElements[i].src = imageUrl;
+        }
+
+        var imageContainers = document.getElementsByClassName("random-image-container");
+        for (var j = 0; j < imageContainers.length; j++) {
+          imageContainers[j].style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0), var(--color-primary)), url('" + imageUrl + "')";
+        }
+      });
+    }
+  </script>
+</head>
+<body class="cdnn">
+
+  <header style="background: var(--color-secondary);">
+    <div class="txt mx-auto flex justify-between items-center py-4 px-4">
+      <a href="https://f.dreamclouds.fr"><h1 class="text-2xl font-bold">☁️ Funasitien</h1></a>
+      <button class="dark-mode-toggle" onclick="toggleTheme()">
+        <span class="icon"></span>
+      </button>
+    </div>
+  </header>
+  <!-- Banner section -->
+  <section height="200" class="random-image-container py-10 md:py-24">
+        <div class="bg-transparent container mx-auto flex items-center justify-center">
+            <h1 class="text-3xl font-bold txt">ArchCloud</h1>
+        </div>
+    </section>
+  <div class="cdnn mx-8">
+    <div class="cdnn md:flex md:justify-between md:items-center">
+    <div class="cdnn mt-8 py-4 px-4">
+      <h1 class="cdnn text-3xl font-bold mb-4">À propos de l'archive 📚</h1>
+      <p class="leading-loose">J'ai eut la chance de pouvoir diriger et créer
+        beaucoup de projets, mais malheureusement ils n'ont pas tous durée.
+        ArchCloud me permet donc de pouvoir réunir tout les souvenirs créé 
+        avec ces projets, d'en collecter de nouveaux et de, quelques fois, 
+      reprendre contact avec d'ancien membres :d</p>
+    <h2 class="text-3xl font-bold mb-4 py-4">Les Projets :</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"> 
+      <!-- Card -->
+      <a href="demov1"><div class="group overflow-hidden rounded-lg shadow-lg">
+        <div class="relative">
+          <!-- Custom Image Background -->
+          <div class="h-48 bg-center bg-contain bg-no-repeat transform group-hover:scale-110 transition-transform" style="background-image: url('../../img/archive/title/demov1.png');"></div>
+          <!-- Text Info on Hover -->
+          <div class="absolute bottom-0 left-0 w-full px-4 py-2 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity">
+            <h2 class="text-white text-lg font-semibold">DEMOCRAFT V1</h2>
+            <p class="text-gray-200 text-sm">DemoCraft de mars à juin 2022</p>
+          </div>
+        </div>
+      </div></a>
+      <a href="morph"><div class="group overflow-hidden rounded-lg shadow-lg">
+      <div class="relative">
+          <!-- Custom Image Background -->
+          <div class="h-48 bg-center bg-contain bg-no-repeat transform group-hover:scale-110 transition-transform" style="background-image: url('../../img/archive/title/morph.png');"></div>
+          <!-- Text Info on Hover -->
+          <div class="absolute bottom-0 left-0 w-full px-4 py-2 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity">
+            <h2 class="text-white text-lg font-semibold">MORPH SMP</h2>
+            <p class="text-gray-200 text-sm">Été 2022 a/ PhoeNight</p>
+          </div>
+        </div>
+      </div></a>
+      <a href="diamond"><div class="group overflow-hidden rounded-lg shadow-lg">
+        <div class="relative">
+          <!-- Custom Image Background -->
+          <div class="h-48 bg-center bg-contain bg-no-repeat transform group-hover:scale-110 transition-transform" style="background-image: url('../../img/archive/title/dw.png');"></div>
+          <!-- Text Info on Hover -->
+          <div class="absolute bottom-0 left-0 w-full px-4 py-2 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity">
+            <h2 class="text-white text-lg font-semibold">Diamond Wars</h2>
+            <p class="text-gray-200 text-sm">Serveur mini-jeux de Diamond Heberg</p>
+          </div>
+        </div>
+      </div></a>
+      <a href="kerna"><div class="group overflow-hidden rounded-lg shadow-lg">
+      <div class="relative">
+          <!-- Custom Image Background -->
+          <div class="h-48 bg-center bg-contain bg-no-repeat transform group-hover:scale-110 transition-transform" style="background-image: url('../../img/archive/title/kernav1.png');"></div>
+          <!-- Text Info on Hover -->
+          <div class="absolute bottom-0 left-0 w-full px-4 py-2 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity">
+            <h2 class="text-white text-lg font-semibold">Kernacraft</h2>
+            <p class="text-gray-200 text-sm">Première saison du serveur minecraft de Kernanec</p>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+      <h1 class="cdnn text-3xl py-4 font-bold mb-4">💖 Aidez ce projet</h1>
+      <p class="leading-loose">Si vous venez ici, c'est que vous avez sans doute déjà participez à l'un de ces projets. Alors, si vous 
+      avez 5 minutes à nous donner, vérifiez que vous n'avez pas de captures d'écran ou de contenu interessant pour l'archive sur votre ordinateur !
+      Et si vous en avez, envoyer les nous par 
+    
+      <a href="https://dsc.gg/drmcld" class="text-white bg-indigo-500 py-2 mx-2 px-4 rounded">
+        <i class="fa-brands fa-discord"></i> Discord
+      </a>
+        ou par
+      <a href="mailto:funasitien@dreamcloud.fr" class="text-white bg-gray-500 py-2 px-4 mx-2 rounded">
+        <i class="fa-solid fa-envelope"></i> Mail
+      </a>
+      
+      !</p>
+      
+</div>
+</div>
+</div>
+<footer class="txt footer rounded-lg shadow m-4 py-2 my-4">
+  <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <a class="flex items-center mb-4 sm:mb-0">
+                <img src="https://f.dreamclouds.fr/img/logo.png" class="h-8 mr-3 txt" alt="DreamCloud logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap">By DreamCloud</span>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                <li>
+                    <a href="mailto:funasitien@dreamclouds.fr" class="mr-4 hover:underline md:mr-6 "><i class="fa-solid fa-envelope"></i> Contact</a>
+                </li>
+                <li>
+                    <a href="https://dsc.gg/drmcld" class="mr-4 hover:underline md:mr-6"><i class="fa-brands fa-discord"></i> Discord</a>
+                </li>
+                <li>
+                    <a href="../../../privacy" class="mr-4 hover:underline md:mr-6"><i class="fa-solid fa-key"></i> Privacy Policy</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://f.dreamclouds.fr/" class="hover:underline">DreamCloud Dev</a>. Tout droit réservé.</span>
+    </div>
+</footer>
+
+  <script>
+    displayRandomImage(); // Load a random image when the page loads
+  </script>
+  <script src="../../script.js"></script>
+</body>
+</html>
+

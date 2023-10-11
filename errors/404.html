@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="https://cdn.tailwindcss.com" rel="stylesheet"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>404 Not Found</title>
+</head>
+<style>
+.theme-light {
+ --color-primary: #f0f0f0;
+ --color-secondary: #dedede;
+ --color-accent: #a1d8fb;
+ --font-color: #000000;
+ }
+.theme-dark {
+ --color-primary: #1a202c;
+ --color-secondary: #34425d;
+ --color-accent: #a1d8fb;
+ --font-color: #ffffff;
+ }
+
+.cdnn {
+  background-color: var(--color-primary);
+  color: var(--font-color);
+}
+.main-content {
+  text-align: center;
+  padding: 50px;
+}
+
+.not-found {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  font-size: 72px;
+  margin: 0;
+}
+
+.subheading {
+  font-size: 24px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 20px;
+  background-color: #6ee7b7;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #4fbb94;
+}
+
+.footer {
+  background: var(--color-secondary);
+}
+
+.header {
+  background: var(--color-secondary);
+}
+
+.dark-mode-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.theme-light .icon {
+  background-image: url('https://f.dreamclouds.fr/img/sun.png');
+}
+
+.theme-dark .icon {
+  background-image: url('https://f.dreamclouds.fr/img/moon.png');
+}
+
+</style>
+<body class="cdnn">
+      <header style="background: var(--color-secondary);">
+      <div class="txt mx-auto flex justify-between items-center py-4 px-4">
+      <a href="https://f.dreamclouds.fr"><h1 class="text-2xl font-bold">☁️ Funasitien</h1></a>
+      <button class="dark-mode-toggle" onclick="toggleTheme()">
+        <span class="icon"></span>
+      </button>
+    </div>
+  </header>
+    
+    <main class="main-content py-20 my-8">
+      <div class="not-found">
+        <h1 class="heading"><strong>404</strong></h1>
+        <p class="subheading">Oops! The page you're looking for does not exist.</p>
+        <a class="button"><button onclick="history.back()">Go Back</button></a>
+      </div>
+    </main>
+
+    <footer class="txt footer rounded-lg shadow m-4 py-4">    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <a class="flex items-center mb-4 sm:mb-0">
+                <img src="https://f.dreamclouds.fr/img/logo.png" class="h-8 mr-3 txt" alt="DreamCloud logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap">By DreamCloud</span>
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                <li>
+                    <a href="mailto:funasitien@dreamclouds.fr" class="mr-4 hover:underline md:mr-6 "><i class="fa-solid fa-envelope"></i> Contact</a>
+                </li>
+                <li>
+                    <a href="https://dsc.gg/drmcld" class="mr-4 hover:underline md:mr-6"><i class="fa-brands fa-discord"></i> Discord</a>
+                </li>
+                <li>
+                    <a href="../privacy" class="mr-4 hover:underline md:mr-6"><i class="fa-solid fa-key"></i> Privacy Policy</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 sm:mx-auto lg:my-8" style="background-color: var(--font-color)"/>
+          <div class="mx-auto flex justify-center items-center">
+            <!--<a href="../"><img class="px-1 flag-current" src="/img/fr.png"/></a>
+            <a href="../en"><img class="px-1 flag" src="/img/en.png"/></a>-->
+          </div>
+        <span class="py-2 block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://f.dreamclouds.fr/" class="hover:underline">DreamCloud™</a>. Tout droit réservé.</span>
+    </div>
+</footer>
+
+  </div>
+
+  <script>
+  // function to set a given theme/color-schemefunction setTheme(themeName) {
+  localStorage.setItem('theme', themeName);
+  document.documentElement.className = themeName;
+}
+
+// function to toggle between light and dark theme
+function toggleTheme() {
+  if (localStorage.getItem('theme') === 'theme-dark') {
+    setTheme('theme-light');
+  } else {
+    setTheme('theme-dark');
+  }
+}
+
+        // Immediately invoked function to set the theme on initial load
+        (function () {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-dark');
+            } else {
+                setTheme('theme-light');
+            }
+        })();
+  </script>
+</body>
+
+</html>
+
