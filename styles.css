@@ -233,7 +233,8 @@ hr {
         background-size: cover;
         background-position: center;
         position: relative;
-  color: var(--color-primary);
+        color: var(--color-primary);
+        height: 50vh;
     }
 .bannerr img {
         width: 100px; /* Adjust the image size as needed */
